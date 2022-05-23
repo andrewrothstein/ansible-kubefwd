@@ -1,0 +1,56 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for install in {{ kubefwd_install_dir }}
+  become: true
+  stat:
+    path: '{{ kubefwd_install_dir }}'
+  changed_when: false
+  register: kubefwd_binary
+- when: not kubefwd_binary.stat.exists
+  block:
+    - name: downloading {{ kubefwd_url }} to {{ kubefwd_tmp_archive }}
+      become: true
+      become_user: root
+      get_url:
+        url: '{{ kubefwd_url }}'
+        dest: '{{ kubefwd_tmp_archive }}'
+        checksum: '{{ kubefwd_checksum }}'
+        mode: 0644
+    - name: mkdir {{ kubefwd_install_dir }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ kubefwd_install_dir }}'
+        mode: 0755
+        state: directory
+    - name: unarchiving {{ kubefwd_tmp_archive }} to {{ kubefwd_install_dir }}
+      become: true
+      become_user: root
+      unarchive:
+        remote_src: true
+        src: '{{ kubefwd_tmp_archive }}'
+        dest: '{{ kubefwd_install_dir }}'
+        creates: '{{ kubefwd_install_exe }}'
+  always:
+    - name: rm {{ kubefwd_tmp_archive }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ kubefwd_tmp_archive }}'
+        state: absent
+- name: linking {{ kubefwd_link }} to {{ kubefwd_install_exe }}
+  become: true
+  become_user: root
+  file:
+    src: '{{ kubefwd_install_exe }}'
+    dest: '{{ kubefwd_link }}'
+    state: link

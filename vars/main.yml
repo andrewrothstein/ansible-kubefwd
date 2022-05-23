@@ -1,0 +1,11 @@
+---
+# vars file for kubefwd
+kubefwd_platform: '{{ kubefwd_os }}_{{ kubefwd_arch }}'
+kubefwd_name: kubefwd_{{ kubefwd_ver }}_{{ kubefwd_platform }}
+kubefwd_url: '{{ kubefwd_mirror }}/{{ kubefwd_ver }}/kubefwd_{{ kubefwd_platform }}.{{ kubefwd_archive_type | default("tar.gz") }}'
+kubefwd_checksum: '{{ kubefwd_checksums[kubefwd_ver][kubefwd_platform] }}'
+kubefwd_archive: '{{ kubefwd_name }}.{{ kubefwd_archive_type | default("tar.gz") }}'
+kubefwd_tmp_archive: '{{ kubefwd_tmp_dir | default("/tmp") }}/{{ kubefwd_archive }}'
+kubefwd_install_dir: '{{ kubefwd_parent_install_dir }}/{{ kubefwd_name }}'
+kubefwd_install_exe: '{{ kubefwd_install_dir }}/kubefwd'
+kubefwd_link: '{{ kubefwd_parent_install_dir }}/bin/kubefwd'
