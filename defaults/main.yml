@@ -1,9 +1,13 @@
 ---
 # defaults file for kubefwd
-kubefwd_ver: 1.22.3
+kubefwd_ver: 1.22.4
 kubefwd_mirror: https://github.com/txn2/kubefwd/releases/download
-kubefwd_os: Linux
-kubefwd_arch: x86_64
+kubefwd_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  armv6: armv6
+  386: i386
+  x86_64: x86_64
 kubefwd_parent_install_dir: /usr/local
 kubefwd_checksums:
   # https://github.com/txn2/kubefwd/releases/download/1.22.3/kubefwd_checksums.txt
@@ -26,3 +30,23 @@ kubefwd_checksums:
     Windows_i386: sha256:fdb526144605095ab2f33d725636f2a12df96828d3c9d09f2bb20f67436fe79d
     # https://github.com/txn2/kubefwd/releases/download/1.22.3/kubefwd_Windows_x86_64.zip
     Windows_x86_64: sha256:84c5649264037a73aeb93450932c21a964fc6816205f1d4f46bc23aadb79dbab
+  # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_checksums.txt
+  '1.22.4':
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:66eebaffe9bee79a3fe35ce4e7ca916da115e4573ef2edd17ac9b9cad08c5805
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:3e9f59e7f1631acd8a42f22201f6a4a1fa220360db0dd0b6f9e9aed0c17be681
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:55e605643cc247a768e233b3467a36621e23118423145512a28ba5ed0611057f
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:bae3ef1eb79501754f7e5b980bf8db28072596b82761f71fe135def83570e492
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:c2ec7117689d071fb52042f6e43ce74f853dda14a295db73c0d9048f94617056
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:234865423b2f7d79cfa897dc058fb322a197bf64d629b9f58618a1c858aca8b8
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Windows_armv6.zip
+    Windows_armv6: sha256:33446d18e17c31ec97cf44d9cb30afebee595c5ed175c1ebd9d4a6afbfc1cbef
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:848751c1ae24e647ccb27150aeb8cef5fda33c7add1ef8f741840a6583b07882
+    # https://github.com/txn2/kubefwd/releases/download/1.22.4/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:1eb5280c29167d1ccf317c21a3c7c9bdfec4827af1f5a75eb732d2428f764c6b

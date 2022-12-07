@@ -1,5 +1,7 @@
 ---
 # vars file for kubefwd
+kubefwd_os: '{{ ansible_system }}'
+kubefwd_arch: '{{ kubefwd_arch_map[ansible_architecture] }}'
 kubefwd_platform: '{{ kubefwd_os }}_{{ kubefwd_arch }}'
 kubefwd_name: kubefwd_{{ kubefwd_ver }}_{{ kubefwd_platform }}
 kubefwd_url: '{{ kubefwd_mirror }}/{{ kubefwd_ver }}/kubefwd_{{ kubefwd_platform }}.{{ kubefwd_archive_type | default("tar.gz") }}'
