@@ -17,7 +17,7 @@ dl()
     local file=kubefwd_${platform}.${archive_type}
     local url=$MIRROR/${ver}/$file
     printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform $(grep $file $lchecksum | awk '{print $1}')
+    printf "    %s: sha256:%s\n" $platform $(grep -e "${file}\$" $lchecksum | awk '{print $1}')
 }
 
 dl_ver () {
@@ -38,9 +38,8 @@ dl_ver () {
     dl $lchecksum $ver Linux armv6
     dl $lchecksum $ver Linux i386
     dl $lchecksum $ver Linux x86_64
-    dl $lchecksum $ver Windows armv6 zip
     dl $lchecksum $ver Windows i386 zip
     dl $lchecksum $ver Windows x86_64 zip
 }
 
-dl_ver ${1:-1.22.5}
+dl_ver ${1:-v1.25.1}

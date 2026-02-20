@@ -1,12 +1,12 @@
 ---
 # defaults file for kubefwd
-kubefwd_ver: 1.22.5
+kubefwd_ver: v1.25.1
 kubefwd_mirror: https://github.com/txn2/kubefwd/releases/download
 kubefwd_arch_map:
   aarch64: arm64
   arm64: arm64
   armv6: armv6
-  386: i386
+  x86_32: i386
   x86_64: x86_64
 kubefwd_parent_install_dir: /usr/local
 kubefwd_checksums:
@@ -70,3 +70,111 @@ kubefwd_checksums:
     Windows_i386: sha256:4576540dc41b5ecceded37702f6da0e981488ed09cdadd3a623366451c234c57
     # https://github.com/txn2/kubefwd/releases/download/1.22.5/kubefwd_Windows_x86_64.zip
     Windows_x86_64: sha256:8e8b893ab4fca6020cbade48b6b142b44dfd4770a686456ac2f8d34aad0c4fec
+  # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_checksums.txt
+  'v1.23.0':
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:15a80c3142c2c8e69cdc25c2a05766fe338cd8040104fca15ebf1f1432dada56
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:f690dfcba6b5a9c13d9a773f8e5c4a4f376102f155b175ade5a4d85972066235
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:cba01563e63c09624bf104a393d3ff45fd44b5368ab75dba05a1f3e83879056d
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:a58ab58c466075bdac49dde5568d9d84552b4ba4f07d6c8bb77f7d3272f4ad12
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:7ff8ac9916c98c154f9d184fddf9ad02eeb36cf3de9b5c4f94fec66fd6fa32fb
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:2226532f1c5df185bb39caabea82530b955e7ccb56a117cddc11e7bd8e679cf9
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:ed59ee9f113bbad37b83eec23c0d4717900b12eba5debc3323612e6851158a56
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.0/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:ded4d4d0dafc87183ddf0e8e109564600b80cd8441649677dbf8dcec4d3c7fc8
+  # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_checksums.txt
+  'v1.23.2':
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:1337b7c3661c7c451bd6ef3818d9b47f296619fd29681f0bf7743eb7d7fac160
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:d33e42e373527523605ba0e2961eca6173fd3af86e8a5e16c4e7280ab792fc1c
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:6d2502ff9e687f2e637c7940f2a29ce5d6e94c15cfae9a8cba1b7920a3cb1de9
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:868abefffaeb0057defdf032f2ae6f827198fda1028c2cfd09ab78817bc409bf
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:4133ea04ef77bda562176ebd2d88b02f851e7f7f7801d83d8ef2d73dbb883cbc
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:1268a5575acca3cfa053fc000247f4067f62481d3449462f054023f91738a8c0
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:e75e3c7ca6fc05efc8cc7d8be954099e588b6d6197b256c2817a4c80d9d22888
+    # https://github.com/txn2/kubefwd/releases/download/v1.23.2/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:8ce74895e560bbfb527171f47e53ad5af7128d2d18966cec294fd007816e3ab8
+  # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_checksums.txt
+  'v1.24.0':
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:1de1f4b411e306027702dd15ca9866dd186aa17ee76286cf2f7adc80608dbe7e
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:b9edc6762d93e9ecf24c56c7a220db0642151bb4eac489caad3890271f88d82c
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:3a9a323d73629db537c0da7e54cfd89a67b080b5a6444563796329c91807909e
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:ceb4058ce81c808915028c434aa8ef091e0d3edc8894939ca9d0b355bf37a02b
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:3675b3ef18e9272620ef2d4b9840ff9646f1146f0fd2dbefa05f165bee5b8800
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:628cdc31b946f5c545dd12ab4fa278bf42df03c78d715a5a59d118622c1d1094
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:6993b50ea48bb852a3cd17d8a300adb457effeae471276d1138e82c809769582
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.0/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:06641d89444c93bbb1d9544ef1803f067973f4e2167f8d37ade23720a8e4e86c
+  # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_checksums.txt
+  'v1.24.1':
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:c6b7ea825e22bfdf653109aa5ae86a2f716063a6462e29b6f4018e88174372af
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:fddd734abccf4794fa4508757d8e05dea1a30ebd75fec69965da77e8416d3ebb
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:899405e99f8115af55f5b04f773061ce7ad8b76d14591743a20831597c77aa41
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:dd2dc4e9042b2e893a1cb5e5de1982928313bccfda85d5ca281b3b30cc4efdb1
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:cdf6ff29b40cc6b18c095397940955405802d7c9285570df06515dda7a7f5792
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:3572fd6227e9a30ed192b409c886c7fb2f1306204236f7f797482e6877027946
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:2cea3fd8a042a7b9175437685fe0fcc0ff155cef8002e467df3bf6a11dec94f0
+    # https://github.com/txn2/kubefwd/releases/download/v1.24.1/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:89905068411524f5d7595aebca99c51fbe775c902bb92db358de6b97c9224148
+  # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_checksums.txt
+  'v1.25.0':
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:7959907e6d6be6d105cd5ee415509ffd3c3364d0d71bbc408fc1a110fb264ea8
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:f0aa45c390bb56d0ecdc7e3cc0e4d5928aeee19f951dc4fbe727f2c739ec7195
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:f6fe4277830be263efbcfe0eaadbb4b9ce166862cebb3d5064d851f37e1bd2a4
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:f34cabc05ce96994b3cafe606e9767e9ee369e16e7bd2235fe79cc734da105e9
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:45fff09ad61c63c43b3c9794af7194d1a86518df5524456ac3876f07869fec24
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:c24f8a09c14406643357719ba2694f524966cd06be22233ca34eaec539a1e1a0
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:de59cd789b4af9a8124439c781e8807e11b8fa6ef844dc0c7a31d988aa79017c
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.0/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:0d9fd3a9b4b7821f583bcc8bd2adbe21246d28283300af0e598d6db759cff922
+  # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_checksums.txt
+  'v1.25.1':
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:b625586bd7c034b8d4814aa11369a37c06e454535083c627541d52db04b2d8bc
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:2d74f8d489fa653c98af8a14fe6df00303cb1552ea0071419c08ed600df47bbb
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:6e6d00c875730923cf07a7749582cf6d74a9dd94bf15d8fc12ce39c8409dfa1d
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:681c88a535d0d6944f51038ca182fc7632750d81e15b95a5b9f81e1c6dc2e766
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:4dabce03679aee034cebf0d5e2b5084d65110d6559fbeb9efde9942ec2445762
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:7f5b9d84a6990965c59ad2be0b77c0e7858ffe208eb84289aac42c5c072a310a
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:a15d3a093d8a2e26226587bf9576179853ce9fd562922ff1a48e3e8157ba5e3e
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.1/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:edc2db21f5d9bb792cd11c84b8555512f4a93ab42b86f22d87dc469ce6613cc7
