@@ -1,6 +1,6 @@
 ---
 # defaults file for kubefwd
-kubefwd_ver: v1.25.12
+kubefwd_ver: v1.25.13
 kubefwd_mirror: https://github.com/txn2/kubefwd/releases/download
 kubefwd_arch_map:
   aarch64: arm64
@@ -358,3 +358,21 @@ kubefwd_checksums:
     Windows_i386: sha256:840117b81f66038f17d2bf2ded128b053f28e4dfcbca64ca94eceb85690b1baa
     # https://github.com/txn2/kubefwd/releases/download/v1.25.12/kubefwd_Windows_x86_64.zip
     Windows_x86_64: sha256:0f64184a213d1d209662c6b71b78af657f0e3800aa130a702c3d1b238baa66fa
+  # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_checksums.txt
+  'v1.25.13':
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:f24639f64970896410d407d03a425b16eaa29815396f45901098e2e58ce5e2e0
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:83f785bffb960301ae8b2ea7ce38f753be0cb04b3ba4ee586c6d42327a0f3d77
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:36025abc33afea72e6976eca9f82bee2f26bf50f1908f17d9a68facb3eba2602
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:9f8a4e6edac52b9d3c3eb29e601cc31413e992c4e73ead3fe79cc27245082492
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:32e636c18ebace8e8086f0eac502f5795e7749d029d919ff71a217873787f515
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:09a97d28be6e2c5af6a5edd0734fd4122d006d5e99f4fdfe8b540c89f92c5825
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:121668b59b45e57b46714a9e0439ae0a0dcd155f63c9605d792ba6e2b4016306
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:90ef3fa2f50e90e05d52109ce41291650fca76e79c6bccfb15e68fba51b737b7
