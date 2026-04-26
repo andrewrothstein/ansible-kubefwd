@@ -1,6 +1,6 @@
 ---
 # defaults file for kubefwd
-kubefwd_ver: v1.25.13
+kubefwd_ver: v1.25.14
 kubefwd_mirror: https://github.com/txn2/kubefwd/releases/download
 kubefwd_arch_map:
   aarch64: arm64
@@ -376,3 +376,21 @@ kubefwd_checksums:
     Windows_i386: sha256:121668b59b45e57b46714a9e0439ae0a0dcd155f63c9605d792ba6e2b4016306
     # https://github.com/txn2/kubefwd/releases/download/v1.25.13/kubefwd_Windows_x86_64.zip
     Windows_x86_64: sha256:90ef3fa2f50e90e05d52109ce41291650fca76e79c6bccfb15e68fba51b737b7
+  # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_checksums.txt
+  'v1.25.14':
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:e335851d673a8c1c6faff844ffbb919071f4d2e32c6f56ab5ea1f7342e4d0ce9
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:bc03dc5bd135a6b5825cbf4b34209fd2b0952dc93a42116421eb343426a73643
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Linux_arm64.tar.gz
+    Linux_arm64: sha256:05b1a61f67d35aeb028318dc39d565e4c3f202f3038c40998b36382fda0c0631
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Linux_armv6.tar.gz
+    Linux_armv6: sha256:6fc3b4964c86d16ac08918919a9c87b77680d48f0e067112d8f01ac7acebfcdf
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Linux_i386.tar.gz
+    Linux_i386: sha256:005df789168e618a9136f4bebdfce0514fcd4e9e0c2c2625fc935b4b2d20e8a5
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:ebaeab597a8f868e3c7b0d64755837b17b64a7a7e929dfbd6b35868362fc1f69
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Windows_i386.zip
+    Windows_i386: sha256:718c9c1e4fa0ac6bc32aa7a346f1fb401df08e62149bde9ca539ecb177754627
+    # https://github.com/txn2/kubefwd/releases/download/v1.25.14/kubefwd_Windows_x86_64.zip
+    Windows_x86_64: sha256:8d0e17cacd0713c25f9a2a1f08ee0f7a5c46a9246c8e706b80325f4c1afafc6b
