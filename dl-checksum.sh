@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
-readonly DIR=~/Downloads
+readonly DIR=$(mktemp -d)
+trap 'rm -rf "$DIR"' EXIT
 readonly MIRROR=https://github.com/txn2/kubefwd/releases/download
 
 # https://github.com/txn2/kubefwd/releases/download/1.22.3/kubefwd_checksums.txt
@@ -16,8 +17,15 @@ dl()
     local platform="${os}_${arch}"
     local file=kubefwd_${platform}.${archive_type}
     local url=$MIRROR/${ver}/$file
-    printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform $(grep -e "${file}\$" $lchecksum | awk '{print $1}')
+    local sum
+    sum=$(awk -v f="$file" '$2 == f || $2 == "*" f {print $1}' "$lchecksum")
+    if ! printf '%s' "$sum" | grep -Eq '^[0-9a-f]{64}$'
+    then
+        echo "bad or missing checksum for $file: '$sum'" >&2
+        exit 1
+    fi
+    printf "    # %s\n" "$url"
+    printf "    %s: sha256:%s\n" "$platform" "$sum"
 }
 
 dl_ver () {
@@ -26,10 +34,7 @@ dl_ver () {
     printf "  # %s\n" $checksum_url
     local lchecksum=$DIR/kubefwd_${ver}_checksums.txt
 
-    if [ ! -e $lchecksum ];
-    then
-        curl -sSLf -o $lchecksum $checksum_url
-    fi
+    curl -fsSL --proto '=https' --tlsv1.2 -o "$lchecksum" "$checksum_url"
 
     printf "  '%s':\n" $ver
     dl $lchecksum $ver Darwin arm64
@@ -42,4 +47,4 @@ dl_ver () {
     dl $lchecksum $ver Windows x86_64 zip
 }
 
-dl_ver ${1:-v1.25.14}
+dl_ver ${1:-v1.25.18}
